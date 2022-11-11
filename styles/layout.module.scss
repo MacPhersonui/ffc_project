@@ -1,0 +1,241 @@
+@font-face {
+    font-family: Nofex;
+    src: url(../public/fonts/Nofex.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Fifa;
+    src: url(../public/fonts/Fifa.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+.header {
+    width: 20rem
+        /* 1200/60 */
+    ;
+    margin: 0 auto;
+    position: relative;
+    z-index: 999;
+    overflow: hidden;
+
+    .navbar {
+        padding: .366667rem
+            /* 22/60 */
+            .333333rem
+            /* 20/60 */
+        ;
+
+        .logo {
+            background: url(../public/layout/logo.png) no-repeat center/100% auto;
+            float: left;
+            width: 1.5rem
+                /* 120/60 */
+            ;
+            height: .666667rem
+                /* 40/60 */
+            ;
+        }
+
+        ul {
+            float: right;
+            margin-left: .666667rem
+                /* 40/60 */
+            ;
+
+            li {
+                display: inline-block;
+                font-size: .266667rem
+                    /* 16/60 */
+                ;
+                color: #fff;
+                padding: .133333rem
+                    /* 8/60 */
+                    .1rem
+                    /* 25/60 */
+                ;
+                margin: 0 .166667rem
+                    /* 10/60 */
+                ;
+                cursor: pointer;
+                border: .033333rem
+                    /* 2/60 */
+                    solid transparent;
+                border-radius: .583333rem
+                    /* 35/60 */
+                ;
+                vertical-align: top;
+            }
+        }
+    }
+
+    .wallet {
+        float: right;
+    }
+}
+
+.main {
+    position: relative;
+    overflow: hidden;
+    margin-top: -1.883333rem
+        /* 113/60 */
+    ;
+}
+
+.footer {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    ul {
+        li {
+            text-decoration: none;
+            cursor: pointer;
+            width: 0.4rem;
+            height: 0.4rem;
+            margin-bottom: 0.5rem;
+            i {
+                display: inline-block;
+                width: 0.4rem;
+                height: 0.4rem;
+
+                &.twitter {
+                    background: url(../public/home/icon_twitter.svg) no-repeat center;
+                    background-size: 100% auto;
+                }
+
+                &.twitter:hover {
+                    background: url(../public/home/icon_twitter_hover.svg) no-repeat center;
+                    background-size: 100% auto;
+                }
+
+                &.discord {
+                    background: url(../public/home/icon_discord.svg) no-repeat center;
+                    background-size: auto 100%;
+                }
+
+                &.discord:hover {
+                    background: url(../public/home/icon_discord_hover.svg) no-repeat center;
+                    background-size:auto 100%;
+                }
+            }
+        }
+    }
+      
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        width: 20rem
+            /* 1200/60 */
+        ;
+        margin: 0 auto;
+        position: relative;
+        z-index: 999;
+        overflow: hidden;
+
+        .navbar {
+            padding: .366667rem
+                /* 22/60 */
+                .333333rem
+                /* 20/60 */
+            ;
+
+            .logo {
+                background: url(../public/layout/logo.png) no-repeat center/100% auto;
+                float: left;
+                width: 3rem;
+                height: 1.166667rem;
+            }
+
+            ul {
+                float: left;
+                margin-left: .666667rem
+                    /* 40/60 */
+                ;
+
+                li {
+                    display: inline-block;
+                    font-size: .6rem
+                        /* 16/60 */
+                    ;
+                    color: #fff;
+                    padding: .133333rem
+                        /* 8/60 */
+                        .416667rem
+                        /* 25/60 */
+                    ;
+                    margin: 0 .166667rem
+                        /* 10/60 */
+                    ;
+                    cursor: pointer;
+                    border: .033333rem
+                        /* 2/60 */
+                        solid transparent;
+                    border-radius: .583333rem
+                        /* 35/60 */
+                    ;
+                    vertical-align: top;
+
+                    &.active,
+                    &:hover {
+                        // border: .033333rem /* 2/60 */ solid #fff;
+                        color: #ccfd0a;
+                    }
+                }
+            }
+        }
+
+        .wallet {
+            float: right;
+        }
+    }
+
+    .main {
+        position: relative;
+        overflow: hidden;
+        margin-top: -1.883333rem
+            /* 113/60 */
+        ;
+    }
+
+    .footer {
+        font-size: 1rem
+            /* 20/60 */
+        ;
+        width: 20rem
+            /* 1200/60 */
+        ;
+        margin: 0 auto;
+
+        .copyright {
+            font-size: 0.6rem
+                /* 14/60 */
+            ;
+            color: #fff;
+            overflow: hidden;
+            background: #032562;
+            padding: 0.4rem
+                /* 10/60 */
+                .333333rem
+                /* 20/60 */
+            ;
+
+            .inner {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            span {
+                &:first-child {
+                    float: left;
+                }
+
+                &:last-child {
+                    float: right;
+                }
+            }
+        }
+    }
+}

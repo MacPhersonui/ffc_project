@@ -1,0 +1,737 @@
+.bg_video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    background-size: cover;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../public/home/cover.jpg) no-repeat center/ 100% auto;
+    z-index: 999;
+
+    i {
+        background: url(../public/home/logo.png) no-repeat center/ 100%;
+        width: 1.4rem;
+        height: 4rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -2rem 0 0 -0.7rem;
+        animation: drop 1.5s infinite;
+    }
+}
+
+.container {
+    .solgen {
+        width: 20rem;
+        margin: 0 auto;
+        padding: 1.5rem 2rem 0 2rem;
+        display: flex;
+        position: relative;
+
+        i {
+            font-family: fifa;
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+            font-style: normal;
+            position: absolute;
+            white-space: nowrap;
+            top: 1.5rem;
+            left: 0;
+            font-size: 1.5rem;
+            opacity: 0.4;
+            width: max-content;
+            animation: 100s wordsLoop linear infinite
+        }
+
+        >div {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            align-items: center;
+            justify-content: space-between;
+            overflow: inherit;
+        }
+
+        .solgen_content {
+            float: left;
+            width: 9rem;
+
+            .text {
+                height: 4rem;
+
+                .solgen_logo {
+                    background: url(../public/home/solgen_logo.png) no-repeat center/100% auto;
+                    float: left;
+                    width: 2.5rem;
+                    height: 3.1rem;
+                }
+
+                h1 {
+                    color: #CCFD0A;
+                    font-size: 0.6rem;
+                    padding-left: 3rem;
+                }
+
+                h2 {
+                    font-size: 0.3rem;
+                    padding-left: 3rem;
+                    margin-top: 0.4rem;
+                }
+            }
+
+            .team {
+                width: 100%;
+                height: 1rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+
+                .team_swiper {
+                    height: 1rem;
+
+                    .team_list {
+                        height: 1rem;
+
+                        @for $i from 1 to 20 {
+                            &:nth-child(#{$i}) {
+                                background: url(../public/home/team#{$i}.png) no-repeat center/auto 80%;
+                            }
+                        }
+                    }
+                }
+
+                button {
+                    border: 1px solid #CCFD0A;
+                    border-right: 4px solid #CCFD0A;
+                    color: #CCFD0A;
+                    background: none;
+                    padding: 0.1rem 0.3rem;
+                    font-family: fifa;
+                    font-size: 0.25rem;
+                    height: 0.5rem;
+                    white-space: nowrap;
+                    margin-left: 0.5rem;
+                    cursor: pointer;
+                    transition: 0.5s;
+
+                    &:hover {
+                        background: #CCFD0A;
+                        color: #081d27;
+                    }
+                }
+            }
+        }
+
+        .video {
+            width: 6rem;
+            height: 4.9rem;
+            float: right;
+
+            .video_warpper {
+                .swiper_silde {
+                    height: 3.8rem;
+                    border: 2px solid #CCFD0A;
+                    border-radius: 3px;
+                    overflow: hidden;
+                    video{
+                        object-fit: fill;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .swiper_silde_thumbs {
+                height: 0.9rem;
+                border: 2px solid #CCFD0A;
+                border-radius: 3px;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .what_is_ffc {
+        width: 20rem;
+        margin: 0 auto;
+        padding: 1.5rem 2rem 0 2rem;
+        position: relative;
+
+        i.flag {
+            font-family: fifa;
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+            font-style: normal;
+            position: absolute;
+            white-space: nowrap;
+            top: 7.2rem;
+            left: 0;
+            font-size: 1rem;
+            opacity: 0.4;
+            width: max-content;
+            animation: 100s wordsLoop linear infinite;
+            z-index: -1;
+        }
+
+        .title {
+            background: url(../public/home/what_is_ffc_title.png) no-repeat left center/auto 100%;
+            height: 0.6rem;
+            display: block;
+            position: relative;
+            margin-bottom: 0.5rem;
+
+            i {
+                background: url(../public/home/what_is_ffc_subtitle.png) no-repeat center/auto 100%;
+                position: absolute;
+                height: 0.6rem;
+                width: 6.4rem;
+                top: 0.3rem;
+                left: 0.8rem;
+            }
+        }
+
+        .content {
+            .swiper_silde {
+                text-align: left;
+                font-size: 0.35rem;
+                line-height: 1.7em;
+                height: 4rem;
+            }
+
+            .swiper_silde_thumbs {
+                position: relative;
+                height: 3.5rem;
+                cursor: pointer;
+                &:nth-child(1){
+                    span {
+                        background-image: url(../public/home/icon_what_is_ffc.png);
+                    }
+                }
+                &:nth-child(2) {
+                    span {
+                        background-image: url(../public/home/icon_ffc_token.png);
+                    }
+                }
+                &:nth-child(3) {
+                    span {
+                        background-image: url(../public/home/icon_ffc_nft.png);
+                    }
+                }
+                &:nth-child(4) {
+                    span {
+                        background-image: url(../public/home/icon_ffc_game.png);
+                    }
+                }
+                span {
+                    background: url(../public/home/icon_what_is_ffc.png) no-repeat center/100% auto;
+                    width: 100%;
+                    height: 2.5rem;
+                }
+
+                img {
+                    height: 1.5rem !important;
+                    width: 100% !important;
+                }
+
+                i {
+                    color: #CCFD0A;
+                    font-family: Nofex;
+                    font-style: normal;
+                    font-size: 0.4rem;
+                    white-space: nowrap;
+                    display: block;
+                    position: absolute;
+                    top: 3rem;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .football_ambassador{
+        width: 20rem;
+        margin: 0 auto;
+        padding: 1.5rem 1rem 0 1rem;
+        position: relative;
+        i.flag {
+            font-family: fifa;
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+            font-style: normal;
+            position: absolute;
+            white-space: nowrap;
+            top: 1.5rem;
+            left: 0;
+            font-size: 1rem;
+            opacity: 0.4;
+            width: max-content;
+            animation: 100s wordsLoop linear infinite;
+            z-index: -1;
+        }
+        .title {
+            background: url(../public/home/football_ambassador.png) no-repeat left center/auto 100%;
+            height: 0.6rem;
+            display: block;
+            position: relative;
+            margin-bottom: 0.5rem;
+
+            i {
+                background: url(../public/home/football_ambassador_subtitle.png) no-repeat center/auto 100%;
+                position: absolute;
+                height: 0.6rem;
+                width: 10.3rem;
+                top: 0.3rem;
+                left: 0.8rem;
+                opacity: 0.15;
+            }
+        }
+        .content{
+            padding: 1rem 0;
+            ul{
+                display: flex;
+                li{
+                    width: 4rem;
+                    height: 4.5rem;
+                    position: relative;
+                    z-index: 8;
+                    opacity: 0.4;
+                    &:nth-child(1){
+                        .cover{
+                            background-image: url(../public/home/player_1.png);
+                        }
+                    }
+                    &:nth-child(2){
+                        .cover {
+                            background-image: url(../public/home/player_2.png);
+                        }
+                    }
+                    &:nth-child(3){
+                        .cover {
+                            background-image: url(../public/home/player_3.png);
+                        }
+                    }
+                    &:nth-child(4){
+                        .cover {
+                            background-image: url(../public/home/player_4.png);
+                        }
+                    }
+                    &:nth-child(5) {
+                        .cover {
+                            background-image: url(../public/home/player_4.png);
+                        }
+                    }
+                    .cover{
+                        background: url(../public/home/player_1.png) no-repeat center/ auto 100%;
+                        width: 100%;
+                        height:100%;
+                        float: left;
+                        position: absolute;
+                        z-index: 2;
+                    }
+                    &.active{
+                        z-index: 9;
+                        opacity: 1;
+                        h1{
+                            display: block;
+                        }
+                        p{
+                            display: block;
+                        }
+                    }
+                    h1{
+                        color: #CCFD0A;
+                        background: url(../public/home/ambassador_title.png) no-repeat center/auto 100%;
+                        position: absolute;
+                        height: 0.9rem;
+                        width: 5rem;
+                        left: 2.5rem;
+                        z-index: 1;
+                        top: 0.3rem;
+                        display: none;
+                        font-size: 0.24rem;
+                        color: #000;
+                        line-height: 0.8rem;
+                        padding-left: 0.9rem;
+                        font-family: Nofex;
+                    }
+                    p{
+                        color: #fff;
+                        padding-left: 3.5rem;
+                        font-size: 0.35rem;
+                        padding-top: 1.2rem;
+                        position: absolute;
+                        display: none;
+                        width: 15.7rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .roadmap {
+        width: 20rem;
+        margin: 0 auto;
+        padding: 1.5rem 2rem 0 2rem;
+        position: relative;
+        i.flag {
+            font-family: fifa;
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+            font-style: normal;
+            position: absolute;
+            white-space: nowrap;
+            top: 4.4rem;
+            left: 0;
+            font-size: 1rem;
+            opacity: 0.4;
+            width: max-content;
+            animation: 100s wordsLoop linear infinite;
+            z-index: -1;
+        }
+        .title {
+            background: url(../public/home/roadmap.png) no-repeat left center/auto 100%;
+            height: 0.6rem;
+            display: block;
+            position: relative;
+            margin-bottom: 0.5rem;
+
+            i {
+                background: url(../public/home/roadmap_subtitle.png) no-repeat center/auto 100%;
+                position: absolute;
+                height: 0.6rem;
+                width: 5rem;
+                top: 0.3rem;
+                left: 0.8rem;
+                opacity: 0.15;
+            }
+        }
+
+        .content {
+            margin: 2rem 0;
+            overflow: hidden;
+
+            ul {
+                background: url(../public/home/roadmap_line.png) no-repeat left center/auto 100%;
+                height: 3.7rem;
+                position: relative;
+                width: 26rem;
+
+                li {
+                    position: absolute;
+                    left: 100rem;
+
+                    h1 {
+                        color: #CCFD0A;
+                        font-size: 0.5rem;
+                    }
+
+                    h2 {
+                        font-size: 0.3rem;
+                    }
+
+                    &:nth-child(1) {
+                        left: 2.7rem;
+                        top: -0.2rem;
+                    }
+
+                    &:nth-child(2) {
+                        left: 4.1rem;
+                        bottom: 0rem;
+                    }
+
+                    &:nth-child(3) {
+                        left: 9.1rem;
+                        top: -0.2rem;
+                    }
+
+                    &:nth-child(4) {
+                        left: 10.7rem;
+                        bottom: 0rem;
+                    }
+
+                    &:nth-child(5) {
+                        top: -0.1rem;
+                        left: 14.9rem;
+                        width: 4.8rem;
+                    }
+
+                    &:nth-child(6) {
+                        bottom: 0;
+                        left: 16.2rem;
+                        width: 5.4rem;
+                    }
+
+                    &:nth-child(7) {
+                        top: -0.1rem;
+                        left: 20.3rem;
+                        width: 4.8rem;
+                    }
+
+                    &:nth-child(8) {
+                        bottom: 0;
+                        left: 21.6rem;
+                        width: 7.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .partner {
+        width: 20rem;
+        margin: 0 auto;
+        padding: 1.5rem 2rem 0 2rem;
+        position: relative;
+        i.flag {
+            font-family: fifa;
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+            font-style: normal;
+            position: absolute;
+            white-space: nowrap;
+            top: 2.4rem;
+            left: 0;
+            font-size: 1rem;
+            opacity: 0.4;
+            width: max-content;
+            animation: 100s wordsLoop linear infinite;
+            z-index: -1;
+        }
+        .title {
+            background: url(../public/home/our_partner.png) no-repeat left center/auto 100%;
+            height: 0.6rem;
+            display: block;
+            position: relative;
+            margin-bottom: 0.5rem;
+
+            i {
+                background: url(../public/home/our_partner_subtitle.png) no-repeat center/auto 100%;
+                position: absolute;
+                height: 0.6rem;
+                width:11.4rem;
+                top: 0.3rem;
+                left: 0.8rem;
+                opacity: 0.15;
+            }
+        }
+
+        .content {
+            height: 6rem;
+
+            .outer {
+                .inner {
+                    height: 6rem;
+
+                    @for $i from 1 to 20 {
+                        &:nth-child(#{$i}) {
+                            background: url(../public/imgs/team#{$i}.png) no-repeat center/100% auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .qa{
+        width: 20rem;
+        margin: 0 auto;
+        padding: 1.5rem 2rem 0 2rem;
+        position: relative;
+        i.flag {
+            font-family: fifa;
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+            font-style: normal;
+            position: absolute;
+            white-space: nowrap;
+            top: 2.4rem;
+            left: 0;
+            font-size: 1rem;
+            opacity: 0.4;
+            width: max-content;
+            animation: 100s wordsLoop linear infinite;
+            z-index: -1;
+        }
+
+        .title {
+            background: url(../public/home/qa_title.png) no-repeat left center/auto 100%;
+            height: 0.6rem;
+            display: block;
+            position: relative;
+            margin-bottom: 0.5rem;
+
+            i {
+                background: url(../public/home/qa_subtitle.png) no-repeat center/auto 100%;
+                position: absolute;
+                height: 0.6rem;
+                width: 11.4rem;
+                top: 0.3rem;
+                left: 0.8rem;
+                opacity: 0.15;
+            }
+        }
+        .content{
+            ul{
+                li{
+                    position: relative;
+                    &.active{
+                        p{
+                            display: block;
+                        }
+                    }
+                    i{
+                        font-style: normal;
+                        background: #0A1C3E;
+                        border-radius: 5px;
+                        font-size: 0.4rem;
+                        width: 0.6rem;
+                        height: 0.6rem;
+                        position: absolute;
+                        text-align: center;
+                        line-height: 0.6rem;
+                        left: 0.1rem;
+                        top: 0.25rem;
+                    }
+                    h1{
+                        font-size: 0.4rem;
+                        border-bottom: 1px solid rgba(255,255,255,0.1);
+                        padding: 0.3rem 0;
+                        margin-bottom: 0.2rem;
+                        padding-left: 0.9rem;
+                    }
+                    p{
+                        font-size: 0.3rem;
+                        color: #CCFD0A;
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {}
+}
+
+@keyframes drop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        margin-top: 0;
+    }
+
+    100% {
+        margin-top: 50px;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 10px #ccfd0ac6;
+        border-radius: 50%;
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+
+    40% {
+        box-shadow: 0 0 10px #ccfd0ac6;
+        border-radius: 50%;
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+
+    70% {
+        box-shadow: 0 0 10px #ccfd0ac6;
+        border-radius: 50%;
+        transform: rotate3d(0, 1, 0, -360deg);
+    }
+
+    100% {
+        box-shadow: 0 0 100px #ccfd0ac6;
+        border-radius: 50%;
+        transform: rotate3d(0, 1, 0, -360deg);
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes rainbow2 {
+    0% {
+        filter: hue-rotate(180deg);
+    }
+
+    100% {
+        filter: hue-rotate(540deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+
+    100% {
+        transform: rotate3d(0, 1, 0, -180deg);
+    }
+}
+
+@keyframes wordsLoop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-70%);
+    }
+}
