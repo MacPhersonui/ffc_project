@@ -71,6 +71,34 @@
         }
     }
 
+    .language{
+        background: url(../public/home/icon_language.svg) no-repeat center/ 100% auto;
+        width: 0.3rem;
+        height: 0.3rem;
+        font-size: 0.4rem;
+        margin-right: 0.5rem;
+        float: right;
+        padding-top: 0.65rem;
+        &:hover{
+            dt{
+                display: block;
+            }
+        }
+        dt{
+            font-size: 0.25rem;
+            display: none;
+            cursor: pointer;
+            width: 1rem;
+            padding: 0.02rem 0.1rem;
+            border-radius: 3px;
+            margin-left: -0.2rem;
+            text-align: center;
+            &:hover{
+                background: #032562;
+            }
+        }
+    }
+
     .wallet {
         float: right;
     }

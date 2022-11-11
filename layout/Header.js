@@ -63,6 +63,10 @@ const Header = (props) => {
         <header className={styles.header}>
             <nav className={styles.navbar}>
                 <i className={styles.logo}></i>
+                <dl className={styles.language}>
+                    <dt>French</dt>
+                    <dt>English</dt>
+                </dl>
                 <ul id="Menu">
                     <li data-menuanchor="home" onClick={()=>{window.fullpage_api.moveTo(1,1000)}} className={styles.active}>Home</li>
                     <li data-menuanchor="about_ffc" onClick={()=>{ window.fullpage_api.moveTo(2,1000) }} >About FFC</li>
@@ -73,6 +77,7 @@ const Header = (props) => {
                 {/* <div className={styles.wallet}>
                     <Wallet />
                 </div> */}
+                
             </nav>
             {/* <div className={styles.locale}>
                 <Link

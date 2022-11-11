@@ -474,6 +474,36 @@ const Home = ({
                                             <SwiperSlide className={styles.inner}></SwiperSlide>
                                         </Swiper>
                                     </div>
+                                </div>]<div className={styles.qa + " section"}>
+                                    <i className={styles.flag}>{t('our_partner')} {t('our_partner')} {t('our_partner')} {t('our_partner')} {t('our_partner')} {t('our_partner')} {t('our_partner')} </i>
+                                    <div className={styles.title}>
+                                        <i></i>
+                                    </div>
+                                    <div className={styles.content}>
+                                        <ul>
+                                            <li className={styles.active}>
+                                                <i>Q1</i>
+                                                <h1>{t('q1_q')}</h1>
+                                                <p>{t('q1_a')}</p>
+                                            </li>
+                                            <li><i>Q2</i>
+                                                <h1>{t('q2_q')}</h1>
+                                                <p>{t('q2_a')}</p>
+                                            </li>
+                                            <li><i>Q3</i>
+                                                <h1>{t('q3_q')}</h1>
+                                                <p>{t('q3_a')}</p>
+                                            </li>
+                                            <li><i>Q4</i>
+                                                <h1>{t('q4_q')}</h1>
+                                                <p>{t('q4_a')}</p>
+                                            </li>
+                                            <li><i>Q5</i>
+                                                <h1>{t('q5_q')}</h1>
+                                                <p>{t('q5_a')}</p>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div className={styles.qa + " section"}>
                                     <i className={styles.flag}>{t('our_partner')} {t('our_partner')} {t('our_partner')} {t('our_partner')} {t('our_partner')} {t('our_partner')} {t('our_partner')} </i>
