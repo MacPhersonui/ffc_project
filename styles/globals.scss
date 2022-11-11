@@ -460,6 +460,11 @@ body.react-confirm-alert-body-element {
 .fp-watermark {
   display: none;
 }
+.section{
+  &.fp-table{
+    justify-content: flex-start;
+  }
+}
 
 .card {
   .swiper-slide-active {
@@ -469,6 +474,17 @@ body.react-confirm-alert-body-element {
       p {
         display: block !important;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section{
+    &.fp-table{
+      justify-content: flex-start;
+    }
+    .fp-overflow{
+      min-height: 80vh;
     }
   }
 }
