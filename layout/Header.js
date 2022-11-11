@@ -13,13 +13,15 @@ import {
 const cx = classNames.bind(styles)
 
 const Header = (props) => {
-    const { activeIndex } = props
+    const { activeIndex, scrolling } = props
 
     const router = useRouter()
+  const [openState, setopenState] = useState(false)
+
     const {
         t
     } = useTranslation('common')
-    useEffect(async () => {
+    useEffect( () => {
         // initNetWork()
     }, [])    
 
@@ -60,21 +62,118 @@ const Header = (props) => {
     }
 
     return (
-        <header className={styles.header}>
-            <nav className={styles.navbar}>
-                <i className={styles.logo}></i>
-                <ul id="Menu">
-                    <li data-menuanchor="home" onClick={()=>{window.fullpage_api.moveTo(1,1000)}} className={styles.active}>Home</li>
-                    <li data-menuanchor="about_ffc" onClick={()=>{ window.fullpage_api.moveTo(2,1000) }} >About FFC</li>
-                    <li data-menuanchor="football_ambassador"  onClick={()=>{ window.fullpage_api.moveTo(3,1000) }} >Football Ambassador</li>
-                    <li data-menuanchor="roadmap"  onClick={()=>{ window.fullpage_api.moveTo(4,1000) }} >Roadmap</li>
-                    <li data-menuanchor="our_partner"  onClick={()=>{ window.fullpage_api.moveTo(5,1000) }} >OUR Partner</li>
-                </ul>
-                {/* <div className={styles.wallet}>
+      <header className={cx(styles.header, { blue: scrolling })}>
+        <div className={cx(styles.volet_menu, { active: openState })}>
+          <ul className={styles.menu_wrap}>
+            <li
+              data-menuanchor="home"
+              onClick={() => {
+                setopenState(false)
+                window.fullpage_api.moveTo(1, 1000)
+              }}
+              className={styles.active}
+            >
+              Home
+            </li>
+            <li
+              data-menuanchor="about_ffc"
+              onClick={() => {
+                setopenState(false)
+                window.fullpage_api.moveTo(2, 1000)
+              }}
+            >
+              About FFC
+            </li>
+            <li
+              data-menuanchor="football_ambassador"
+              onClick={() => {
+                setopenState(false)
+                window.fullpage_api.moveTo(3, 1000)
+              }}
+            >
+              Football Ambassador
+            </li>
+            <li
+              data-menuanchor="roadmap"
+              onClick={() => {
+                setopenState(false)
+                window.fullpage_api.moveTo(4, 1000)
+              }}
+            >
+              Roadmap
+            </li>
+            <li
+              data-menuanchor="our_partner"
+              onClick={() => {
+                setopenState(false)
+                window.fullpage_api.moveTo(5, 1000)
+              }}
+            >
+              OUR Partner
+            </li>
+          </ul>
+        </div>
+        <nav className={styles.navbar}>
+          <i className={styles.logo}></i>
+          <div className={cx(styles.open_menu, { open: openState })}>
+            <div
+              onClick={() => {
+                setopenState(!openState)
+              }}
+              className={styles.menu_burger}
+            >
+              <span></span> <span></span> <span></span>
+            </div>
+            <span>MENU</span>
+          </div>
+          <ul id="Menu">
+            <li
+              data-menuanchor="home"
+              onClick={() => {
+                window.fullpage_api.moveTo(1, 1000)
+              }}
+              className={styles.active}
+            >
+              Home
+            </li>
+            <li
+              data-menuanchor="about_ffc"
+              onClick={() => {
+                window.fullpage_api.moveTo(2, 1000)
+              }}
+            >
+              About FFC
+            </li>
+            <li
+              data-menuanchor="football_ambassador"
+              onClick={() => {
+                window.fullpage_api.moveTo(3, 1000)
+              }}
+            >
+              Football Ambassador
+            </li>
+            <li
+              data-menuanchor="roadmap"
+              onClick={() => {
+                window.fullpage_api.moveTo(4, 1000)
+              }}
+            >
+              Roadmap
+            </li>
+            <li
+              data-menuanchor="our_partner"
+              onClick={() => {
+                window.fullpage_api.moveTo(5, 1000)
+              }}
+            >
+              OUR Partner
+            </li>
+          </ul>
+          {/* <div className={styles.wallet}>
                     <Wallet />
                 </div> */}
-            </nav>
-            {/* <div className={styles.locale}>
+        </nav>
+        {/* <div className={styles.locale}>
                 <Link
                     href='#'
                     locale={router.locale === 'en' ? 'zh' : 'en'}
@@ -82,8 +181,8 @@ const Header = (props) => {
                     {router.locale === 'en' ? "English" : "中文"}
                 </Link>
             </div> */}
-            {props.children}
-        </header>
+        {props.children}
+      </header>
     )
 }
 
