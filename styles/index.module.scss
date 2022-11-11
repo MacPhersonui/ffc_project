@@ -971,7 +971,7 @@
     .roadmap {
         width: 20rem;
         margin: 0 auto;
-        padding: 6rem 2rem 0 2rem;
+        padding: 6rem 0 0;
         position: relative;
         i.flag {
             font-family: fifa;
@@ -994,7 +994,7 @@
             display: block;
             position: relative;
             margin-bottom: 0.5rem;
-
+            margin: 0 2rem;
             i {
                 background: url(../public/home/roadmap_subtitle.png) no-repeat center/auto 100%;
                 position: absolute;
@@ -1009,67 +1009,70 @@
         .content {
             margin: 2rem 0;
             overflow: hidden;
-            margin-top: 8rem;
+            margin-top: 1rem;
             width: 39rem;
             ul {
-                background: url(../public/home/roadmap_line.png) no-repeat left center/auto 100%;
-                height: 5.55rem;
+                background: url(../public/home/roadmap_line1.png) no-repeat center center/auto 100%;
+                height: 39rem;
                 position: relative;
-                width: 39rem;
+                width: 100vw;
                 li {
                     position: absolute;
                     left: 100rem;
                     h1 {
                         color: #CCFD0A;
-                        font-size: 0.5rem;
+                        font-size: 0.8rem;
                     }
 
                     h2 {
-                        font-size: 0.3rem;
+                        font-size: 0.5rem;
                     }
 
                     &:nth-child(1) {
-                        left: 2.7rem;
-                        top: -0.2rem;
+                        left: 10.7rem;
+                        top: 1.8rem;
                     }
 
                     &:nth-child(2) {
-                        left: 4.1rem;
-                        bottom: 0rem;
+                      left: 1.3rem;
+                      bottom: 33.5rem;
+                      text-align: right;
                     }
 
                     &:nth-child(3) {
-                        left: 9.1rem;
-                        top: -0.2rem;
+                      left: 10.7rem;
+                      top: 11.6rem;
                     }
 
                     &:nth-child(4) {
-                        left: 10.7rem;
-                        bottom: 0rem;
+                      left: 3.9rem;
+                      bottom: 22.7rem;
+                      text-align: right;
                     }
 
                     &:nth-child(5) {
-                        top: -0.1rem;
-                        left: 14.9rem;
-                        width: 4.8rem;
+                      top: 20.9rem;
+                      left: 10.7rem;
+                      width: 6.8rem;
                     }
 
                     &:nth-child(6) {
-                        bottom: 0;
-                        left: 16.2rem;
-                        width: 5.4rem;
+                      bottom: 13.3rem;
+                      left: 1.4rem;
+                      width: 8rem;
+                      text-align: right;
                     }
 
                     &:nth-child(7) {
-                        top: -0.1rem;
-                        left: 20.3rem;
-                        width: 4.8rem;
+                      top: 30rem;
+                      left: 10.7rem;
+                      width: 7rem;
                     }
-
                     &:nth-child(8) {
-                        bottom: 0;
-                        left: 21.6rem;
-                        width: 7.8rem;
+                      bottom: 90px;
+                      left: 1.4rem;
+                      width: 7.8rem;
+                      text-align: right;
                     }
                 }
             }
