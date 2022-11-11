@@ -344,50 +344,50 @@ const Home = ({
                                                     disableOnInteraction: false,
                                                 }
                                             }
-                                            cardsEffect = {
+                                            cardsEffect={
                                                 {
                                                     perSlideOffset: 8,
                                                     perSlideRotate: 5,
-                                                    Rotate:true,
+                                                    Rotate: true,
                                                     slideShadows: false,
                                                     // transformEl:"active"
                                                 }
                                             }
-                                            modules = {
+                                            modules={
                                                 [EffectCards, Autoplay]
                                             }
                                         >
                                             <SwiperSlide className={styles.player + " player"}>
                                                 <div className={styles.player_item}>
-                                                    <span className={cx(styles.cover,styles.player1)}></span>
+                                                    <span className={cx(styles.cover, styles.player1)}></span>
                                                     <h1>{t("gianluigi_donnarumma")}</h1>
                                                     <p>{t("gianluigi_donnarumma_content1")}</p>
                                                 </div>
                                             </SwiperSlide>
-                                            <SwiperSlide className={styles.player+ " player"}>
+                                            <SwiperSlide className={styles.player + " player"}>
                                                 <div className={styles.player_item}>
-                                                    <span className={cx(styles.cover,styles.player2)}></span>
+                                                    <span className={cx(styles.cover, styles.player2)}></span>
                                                     <h1>{t("achraf_hakimi")}</h1>
                                                     <p>{t("achraf_hakimi_content1")}</p>
                                                 </div>
                                             </SwiperSlide>
-                                            <SwiperSlide className={styles.player+ " player"}>
+                                            <SwiperSlide className={styles.player + " player"}>
                                                 <div className={styles.player_item}>
-                                                    <span className={cx(styles.cover,styles.player3)}></span>
+                                                    <span className={cx(styles.cover, styles.player3)}></span>
                                                     <h1>{t("marco_verratti")}</h1>
                                                     <p>{t('marco_verratti_content1')}</p>
                                                 </div>
                                             </SwiperSlide>
-                                            <SwiperSlide className={styles.player+ " player"}>
+                                            <SwiperSlide className={styles.player + " player"}>
                                                 <div className={styles.player_item}>
-                                                    <span className={cx(styles.cover,styles.player4)}></span>
+                                                    <span className={cx(styles.cover, styles.player4)}></span>
                                                     <h1>{t('lucas_hernández')}</h1>
                                                     <p>{t('lucas_hernández_content1')}</p>
                                                 </div>
                                             </SwiperSlide>
-                                            <SwiperSlide className={styles.player+ " player"}>
+                                            <SwiperSlide className={styles.player + " player"}>
                                                 <div className={styles.player_item}>
-                                                    <span className={cx(styles.cover,styles.player5)}></span>
+                                                    <span className={cx(styles.cover, styles.player5)}></span>
                                                     <h1>{t('lucas_hernández')}</h1>
                                                     <p>{t('lucas_hernández_content1')}</p>
                                                 </div>
@@ -481,26 +481,156 @@ const Home = ({
                                     </div>
                                     <div className={styles.content}>
                                         <ul>
-                                            <li className={cx({"active":qaActive == 1})} onClick={()=>{setQaActive(1)}}>
+                                            <li className={cx({ "active": qaActive == 1 })} onClick={() => { setQaActive(1) }}>
                                                 <i>Q1</i>
                                                 <h1>{t('q1_q')}</h1>
                                                 <p>{t('q1_a')}</p>
                                             </li>
-                                            <li className={cx({"active":qaActive == 2})}  onClick={()=>{setQaActive(2)}}><i>Q2</i>
+                                            <li className={cx({ "active": qaActive == 2 })} onClick={() => { setQaActive(2) }}><i>Q2</i>
                                                 <h1>{t('q2_q')}</h1>
                                                 <p>{t('q2_a')}</p>
                                             </li>
-                                            <li className={cx({"active":qaActive == 3})} onClick={()=>{setQaActive(3)}}><i>Q3</i>
+                                            <li className={cx({ "active": qaActive == 3 })} onClick={() => { setQaActive(3) }}><i>Q3</i>
                                                 <h1>{t('q3_q')}</h1>
                                                 <p>{t('q3_a')}</p>
                                             </li>
-                                            <li className={cx({"active":qaActive == 4})} onClick={()=>{setQaActive(4)}}><i>Q4</i>
+                                            <li className={cx({ "active": qaActive == 4 })} onClick={() => { setQaActive(4) }}><i>Q4</i>
                                                 <h1>{t('q4_q')}</h1>
                                                 <p>{t('q4_a')}</p>
+                                                <>
+                                                    <p>
+                                                        <span>Introduction:&nbsp; NFT - FFC League Rights Card</span>
+                                                    </p>
+                                                    <p>
+                                                        <span>Amount: 1650</span>
+                                                    </p>
+                                                    <p>
+                                                        <span>Price:&nbsp;</span>
+                                                    </p>
+                                                    <p>
+                                                        <span>Phase 1: 0.15 ETH, 300 NFTs&nbsp;</span>
+                                                    </p>
+                                                    <p>
+                                                        <span>Phase 2: 0.25 ETH, 500 NFTs</span>
+                                                    </p>
+                                                    <p>
+                                                        <span>Phase 3: 0.3 ETH, 850 NFTs</span>
+                                                    </p>
+                                                    <p>
+                                                        <span>Rights: FFC League Rights Card = 1NFT + 2000 $FFC</span>
+                                                    </p>
+                                                    <p>
+                                                        <br />
+                                                    </p>
+                                                    <p>
+                                                        <span>—— Holders with the following rights</span>
+                                                    </p>
+                                                    <ul >
+                                                        <li>
+                                                            <p>
+                                                                <span>Airdrops for 2000 $FFC each FFC League Rights Card</span>
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                    <ul >
+                                                        <li>
+                                                            <p>
+                                                                <span>100% getting a random airdrop for star card NFT issued based on Chiliz</span>
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                    <ul >
+                                                        <li>
+                                                            <p>
+                                                                <span>Priority subscription to limited star, club NFT</span>
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                    <ul >
+                                                        <li>
+                                                            <p>
+                                                                <span>Experience the closed beta of the FFC ecological football game and get airdrops for prop</span>
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                    <ul >
+                                                        <li>
+                                                            <p>
+                                                                <span>Discounted purchases or a chance to get other football merchandise, such as star-autographed jerseys, for free</span>
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                    <ul >
+                                                        <li>
+                                                            <p>
+                                                                <span>Rights of drawing tickets for Ligue 1 matches and group photos of stars</span>
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                    <p>
+                                                        <br />
+                                                    </p>
+                                                </>
                                             </li>
-                                            <li className={cx({"active":qaActive == 5})} onClick={()=>{setQaActive(5)}}><i>Q5</i>
+                                            <li className={cx({ "active": qaActive == 5 })} onClick={() => { setQaActive(5) }}><i>Q5</i>
                                                 <h1>{t('q5_q')}</h1>
                                                 <p>{t('q5_a')}</p>
+                                                <>
+                                                    <p>
+                                                        - League of FFC Unique Circulating Tokens
+                                                    </p>
+                                                    <p>
+                                                        - FFC GAME Unique Governance Tokens
+                                                    </p>
+                                                    <p>
+                                                        - Unique Purchase Tokens Of Football Star Card
+                                                    </p>
+                                                    <p>
+                                                        - Fan Loyalty Vote
+                                                    </p>
+                                                    <p>
+                                                        - Buy Club Peripherals
+                                                    </p>
+                                                    <p>
+                                                        - Discounted Match Tickets
+                                                    </p>
+                                                    <p>
+                                                        - Affiliate Web3 Earnings Dividend Voucher
+                                                    </p>
+                                                    <p>
+                                                        <br />
+                                                    </p>
+                                                    <p >
+                                                        <span >Token Symbol: FFC</span>
+                                                    </p>
+                                                    <p >
+                                                        <span >Total Supply: 700,000,000</span>
+                                                    </p>
+                                                    <p >
+                                                        <span >Total Circulation: 33,000,000</span>
+                                                    </p>
+                                                    <p >
+                                                        <span >Distribution:</span>
+                                                    </p>
+                                                    <p >
+                                                        <span >Bonus share with NFT: 4.71%</span>
+                                                    </p>
+                                                    <p >
+                                                        <span >Market: 15.29%</span>
+                                                    </p>
+                                                    <p >
+                                                        <span >Team Incentive: 10% will be released linear in 24 months after locking for one year</span>
+                                                    </p>
+                                                    <p >
+                                                        <span >Ecological alliance team: 20% will be released linear in 24 months after locking for one year</span>
+                                                    </p>
+                                                    <p >
+                                                        <span >Ecological incentive: 30% will be released linear in 24 months after lock-up for one year</span>
+                                                    </p>
+                                                    <p >
+                                                        <span >Developer funds: 20% will be released linear in 24 months after lock-up for one year</span>
+                                                    </p>
+                                                </>
                                             </li>
                                         </ul>
                                     </div>
