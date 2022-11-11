@@ -336,57 +336,58 @@ const Home = ({
                                         <Swiper
                                             effect={"cards"}
                                             grabCursor={true}
-                                            
-                                            className="mySwiper"
+                                            className="mySwiper card"
                                             loop={true}
-                                            // autoplay={
-                                            //     {
-                                            //         delay: 2500,
-                                            //         disableOnInteraction: false,
-                                            //     }
-                                            // }
+                                            autoplay={
+                                                {
+                                                    delay: 5000,
+                                                    disableOnInteraction: false,
+                                                }
+                                            }
                                             cardsEffect = {
                                                 {
-                                                    perSlideOffset: 3,
+                                                    perSlideOffset: 8,
                                                     perSlideRotate: 5,
                                                     Rotate:true,
                                                     slideShadows: false,
                                                     // transformEl:"active"
                                                 }
                                             }
-                                            modules={[EffectCards]}
+                                            modules = {
+                                                [EffectCards, Autoplay]
+                                            }
                                         >
-                                            <SwiperSlide className={styles.player}>
+                                            <SwiperSlide className={styles.player + " player"}>
                                                 <div className={styles.player_item}>
-                                                    <span className={styles.cover}></span>
+                                                    <span className={cx(styles.cover,styles.player1)}></span>
                                                     <h1>{t("gianluigi_donnarumma")}</h1>
                                                     <p>{t("gianluigi_donnarumma_content1")}</p>
                                                 </div>
                                             </SwiperSlide>
-                                            <SwiperSlide className={styles.player}>
+                                            <SwiperSlide className={styles.player+ " player"}>
                                                 <div className={styles.player_item}>
-                                                    <span className={styles.cover}></span>
+                                                    <span className={cx(styles.cover,styles.player2)}></span>
                                                     <h1>{t("achraf_hakimi")}</h1>
                                                     <p>{t("achraf_hakimi_content1")}</p>
                                                 </div>
                                             </SwiperSlide>
-                                            <SwiperSlide className={styles.player}>
+                                            <SwiperSlide className={styles.player+ " player"}>
                                                 <div className={styles.player_item}>
-                                                    <span className={styles.cover}></span>
+                                                    <span className={cx(styles.cover,styles.player3)}></span>
                                                     <h1>{t("marco_verratti")}</h1>
                                                     <p>{t('marco_verratti_content1')}</p>
                                                 </div>
                                             </SwiperSlide>
-                                            <SwiperSlide className={styles.player}>
+                                            <SwiperSlide className={styles.player+ " player"}>
                                                 <div className={styles.player_item}>
-                                                    <span className={styles.cover}></span>
+                                                    <span className={cx(styles.cover,styles.player4)}></span>
                                                     <h1>{t('lucas_hernández')}</h1>
                                                     <p>{t('lucas_hernández_content1')}</p>
                                                 </div>
                                             </SwiperSlide>
-                                            <SwiperSlide className={styles.player}>
+                                            <SwiperSlide className={styles.player+ " player"}>
                                                 <div className={styles.player_item}>
-                                                    <span className={styles.cover}></span>
+                                                    <span className={cx(styles.cover,styles.player5)}></span>
                                                     <h1>{t('lucas_hernández')}</h1>
                                                     <p>{t('lucas_hernández_content1')}</p>
                                                 </div>

@@ -191,9 +191,11 @@ a {
 * {
   box-sizing: border-box;
 }
-html{
+
+html {
   font-size: 60px;
 }
+
 body {
   background: #01071e;
   color: #fff;
@@ -440,20 +442,33 @@ body.react-confirm-alert-body-element {
   object-fit: cover;
 }
 
-.none{
+.none {
   display: none;
 }
 
 #Menu {
-    li{
-        &.active,
-        &:hover {
-          // border: .033333rem /* 2/60 */ solid #fff;
-          color: #ccfd0a;
-        }
+  li {
+
+    &.active,
+    &:hover {
+      // border: .033333rem /* 2/60 */ solid #fff;
+      color: #ccfd0a;
     }
+  }
 }
 
-.fp-watermark{
+.fp-watermark {
   display: none;
+}
+
+.card {
+  .swiper-slide-active {
+    &.player {
+      opacity: 1 !important;
+      h1,
+      p {
+        display: block !important;
+      }
+    }
+  }
 }

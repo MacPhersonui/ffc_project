@@ -301,61 +301,40 @@
         }
         .content{
             padding: 1rem 0;
+            width: 10rem;
+            float: left;
+            >div{
+                overflow:inherit;
+            }
             .player{
-                opacity: 1;
+                opacity: 0.7;
                 .player_item {
-                    width: 8rem;
-                    height: 6.5rem;
+                    width: 6rem;
+                    height: 6rem;
                     position: relative;
                     z-index: 8;
-                    &:nth-child(1) {
-                        .cover {
-                            background-image: url(../public/home/player_1.png);
-                        }
-                    }
-
-                    &:nth-child(2) {
-                        .cover {
-                            background-image: url(../public/home/player_2.png);
-                        }
-                    }
-
-                    &:nth-child(3) {
-                        .cover {
-                            background-image: url(../public/home/player_3.png);
-                        }
-                    }
-
-                    &:nth-child(4) {
-                        .cover {
-                            background-image: url(../public/home/player_4.png);
-                        }
-                    }
-
-                    &:nth-child(5) {
-                        .cover {
-                            background-image: url(../public/home/player_4.png);
-                        }
-                    }
 
                     .cover {
                         background: url(../public/home/player_1.png) no-repeat center/ auto 100%;
                         width: 100%;
                         height: 100%;
                         float: left;
+                        position: relative;
                         z-index: 2;
-                    }
-
-                    &:hover {
-                        z-index: 9;
-                        opacity: 1;
-
-                        h1 {
-                            display: block;
+                        &.player1{
+                            background-image: url(../public/home/player_1.png);
                         }
-
-                        p {
-                            display: block;
+                        &.player2 {
+                            background-image: url(../public/home/player_2.png);
+                        }
+                        &.player3 {
+                            background-image: url(../public/home/player_3.png);
+                        }
+                        &.player4 {
+                            background-image: url(../public/home/player_4.png);
+                        }
+                        &.player5 {
+                            background-image: url(../public/home/player_5.png);
                         }
                     }
 
@@ -365,25 +344,31 @@
                         position: absolute;
                         height: 0.9rem;
                         width: 5rem;
-                        left: 2.5rem;
+                        left: 4.5rem;
                         z-index: 1;
                         top: 0.3rem;
-                        // display: none;
+                        display: none;
                         font-size: 0.24rem;
                         color: #000;
                         line-height: 0.8rem;
-                        padding-left: 0.9rem;
+                        padding-left: 0rem;
                         font-family: Nofex;
                     }
 
                     p {
                         color: #fff;
-                        padding-left: 3.5rem;
+                        margin-left: 5.2rem;
                         font-size: 0.35rem;
-                        padding-top: 1.2rem;
                         position: absolute;
-                        // display: none;
-                        width: 15.7rem;
+                        width: 11rem;
+                        margin-top: 1.4rem;
+                        background: #050e2b6e;
+                        height: 4.6rem;
+                        border-radius: 0.1rem;
+                        padding: 0.3rem 0.5rem;
+                        display: none;
+                        white-space: normal;
+                        text-align: left;
                     }
                 }
             }
