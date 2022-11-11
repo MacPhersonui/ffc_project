@@ -1,23 +1,32 @@
 import React, { useState, useEffect } from "react"
+// @ts-ignore
 import Head from "next/head"
+// @ts-ignore
 import Image from "next/image"
 import styles from "../styles/index.module.scss"
 import classNames from "classnames/bind"
+// @ts-ignore
 import Timer from "react-compound-timer"
 import Web3 from "web3"
+// @ts-ignore
 import Wallet from "../components/wallet"
 import useWallet from "use-wallet"
+// @ts-ignore
 import {
     getInvite,
     getInviteRank,
     createInvite
 } from "../api/api"
+// @ts-ignore
 import tokenConfig from "../contract.config"
+// @ts-ignore
 import { confirmAlert } from "react-confirm-alert"
 import HeaderFooter from "../layout/HeaderFooter"
+// @ts-ignore
 import Clipboard from 'react-clipboard.js'
 import {
     ToastContainer,
+    // @ts-ignore
     toast
 } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -26,12 +35,15 @@ import {
 } from "next/router"
 import {
     useTranslation,
+    // @ts-ignore
     Trans
 } from 'next-i18next'
 import {
     serverSideTranslations
 } from 'next-i18next/serverSideTranslations'
+// @ts-ignore
 import Cookies from 'js-cookie'
+// @ts-ignore
 import {
     utils
 } from "ethers"
@@ -53,8 +65,10 @@ import {
 } from "swiper"
 import 'animate.css'
 
+// @ts-ignore
 const cx = classNames.bind(styles)
 
+// @ts-ignore
 const toastConfig = {
     position: "bottom-left",
     autoClose: 3000,
@@ -66,6 +80,7 @@ const toastConfig = {
 }
 
 
+// @ts-ignore
 const Home = ({
     router
 }) => {
@@ -74,19 +89,21 @@ const Home = ({
         t
     } = useTranslation('common')
 
+    // @ts-ignore
     const wallet = useWallet()
     const {
         account,
         ethereum
     } = wallet
 
+    // @ts-ignore
     const web3 = new Web3(ethereum)
     const [swapCount, setSwapCount] = useState(4)
 
 
    
 
-    useEffect(async () => {
+    useEffect(() => {
         const timer = setInterval(async () => {
             if (account) {
 
@@ -99,26 +116,37 @@ const Home = ({
         if (windowWidth <= 500) {
             setSwapCount(1)
         }
+        // @ts-ignore
         const handleScroll = event => {
             console.log('window.scrollY', window.scrollY)
+            // @ts-ignore
             console.log("roadmap", document.getElementById("roadmap").getBoundingClientRect().top)
+            // @ts-ignore
             if (document.getElementById("ffc").getBoundingClientRect().top < 250) {
+                // @ts-ignore
                 console.log("ffc", document.getElementById("ffc").getBoundingClientRect().top)
                 
+                // @ts-ignore
                 document.querySelector("#ffc_title p").classList.add("animate__animated", "animate__fadeIn", "animate__slow")
+                // @ts-ignore
                 document.querySelector("#ffc_title h1").classList.add("animate__animated", "animate__fadeIn", "animate__slow")
+                // @ts-ignore
                 document.querySelector("#ffc_title h2").classList.add("animate__animated", "animate__fadeIn", "animate__slow")
                 document.querySelectorAll("#ffc ul li")[0].classList.add("animate__animated", "animate__fadeIn", "animate__slow", "animate__delay-1s")
                 document.querySelectorAll("#ffc ul li")[1].classList.add("animate__animated", "animate__fadeIn", "animate__slow", "animate__delay-2s")
                 document.querySelectorAll("#ffc ul li")[2].classList.add("animate__animated", "animate__fadeIn", "animate__slow", "animate__delay-3s")
             }
+            // @ts-ignore
             if (document.getElementById("nft").getBoundingClientRect().top < 300) {
+                // @ts-ignore
                 console.log("nft", document.getElementById("nft").getBoundingClientRect().top)
                 console.log(document.querySelectorAll("#nft ul li")[1])
                 document.querySelectorAll("#nft>ul>li")[0].classList.add("animate__animated", "animate__fadeIn", "animate__slow")
                 document.querySelectorAll("#nft>ul>li")[1].classList.add("animate__animated", "animate__fadeIn", "animate__slow", "animate__delay-1s")
             }
+            // @ts-ignore
             if (document.getElementById("roadmap").getBoundingClientRect().top < 300) {
+                // @ts-ignore
                 console.log("roadmap", document.getElementById("roadmap").getBoundingClientRect().top)
                 document.querySelectorAll("#roadmap ul li")[0].classList.add("animate__animated", "animate__fadeIn", "animate__slow")
                 document.querySelectorAll("#roadmap ul li")[1].classList.add("animate__animated", "animate__fadeIn", "animate__slow", "animate__delay-1s")
