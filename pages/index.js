@@ -52,7 +52,9 @@ import {
     Keyboard,
     FreeMode,
     Thumbs,
-    Autoplay
+    Autoplay,
+    EffectCoverflow,
+    EffectCards
 } from "swiper"
 import 'animate.css'
 import ReactFullpage from '@fullpage/react-fullpage'
@@ -112,9 +114,9 @@ const Home = ({
 
         //loading
         document.getElementById("loading").classList.add("animate__animated", "animate__fadeOut", "animate__slower")
-        setTimeout(()=>{
+        setTimeout(() => {
             document.getElementById("loading").classList.add("none")
-        },2000)
+        }, 2000)
 
 
         return () => {
@@ -129,8 +131,8 @@ const Home = ({
         if (origin.index == 0) {
             document.getElementById("solgen_logo").classList.add("animate__animated", "animate__fadeInLeft", "animate__fast", "animate__delay-2s")
             document.getElementById("solgen_title").classList.add("animate__animated", "animate__fadeInLeft", "animate__fast", "animate__delay-3s")
-            document.getElementById("solgen_subtitle").classList.add("animate__animated", "animate__fadeInLeft", "animate__fast", "animate__delay-4s")
-            document.getElementById("solgen_team").classList.add("animate__animated", "animate__fadeInLeft", "animate__fast", "animate__delay-5s")
+            document.getElementById("solgen_subtitle").classList.add("animate__animated", "animate__fadeInLeft", "animate__fast", "animate__delay-3s")
+            document.getElementById("solgen_team").classList.add("animate__animated", "animate__fadeInLeft", "animate__fast", "animate__delay-3s")
             document.getElementById("solgen_video").classList.add("animate__animated", "animate__fadeInRight", "animate__fast", "animate__delay-2s")
         }
     }
@@ -156,8 +158,8 @@ const Home = ({
                     scrollingSpeed={1000} /* Options here */
                     afterLoad={afterLoad}
                     onLeave={onLeave}
-                    anchors = {['home', 'about_ffc', 'football_ambassador', 'roadmap', 'our_partner']}
-                    menu = '#Menu'
+                    anchors={['home', 'about_ffc', 'football_ambassador', 'roadmap', 'our_partner']}
+                    menu='#Menu'
                     render={({ state, fullpageApi }) => {
                         return (
                             <ReactFullpage.Wrapper>
@@ -307,19 +309,19 @@ const Home = ({
                                             className="mySwiper"
                                         >
                                             <SwiperSlide className={styles.swiper_silde_thumbs}>
-                                                <span  />
+                                                <span />
                                                 <i>{t('what_is_ffc')}</i>
                                             </SwiperSlide>
                                             <SwiperSlide className={styles.swiper_silde_thumbs}>
-                                                <span  />
+                                                <span />
                                                 <i>{t('ffc_token')}</i>
                                             </SwiperSlide>
                                             <SwiperSlide className={styles.swiper_silde_thumbs}>
-                                                <span  />
+                                                <span />
                                                 <i>{t('ffc_nft')}</i>
                                             </SwiperSlide>
                                             <SwiperSlide className={styles.swiper_silde_thumbs}>
-                                                <span  />
+                                                <span />
                                                 <i>{t('ffc_gamefi')}</i>
                                             </SwiperSlide>
                                         </Swiper>
@@ -331,33 +333,66 @@ const Home = ({
                                         <i></i>
                                     </div>
                                     <div className={styles.content}>
-                                        <ul>
-                                            <li className={styles.active}>
-                                                <span className={styles.cover}></span>
-                                                <h1>{t("gianluigi_donnarumma")}</h1>
-                                                <p>{t("gianluigi_donnarumma_content1")}</p>
-                                            </li>
-                                            <li>
-                                                <span className={styles.cover}></span>
-                                                <h1>{t("achraf_hakimi")}</h1>
-                                                <p>{t("achraf_hakimi_content1")}</p>
-                                            </li>
-                                            <li>
-                                                <span className={styles.cover}></span>
-                                                <h1>{t("marco_verratti")}</h1>
-                                                <p>{t('marco_verratti_content1')}</p>
-                                            </li>
-                                            <li>
-                                                <span className={styles.cover}></span>
-                                                <h1>{t('lucas_hernández')}</h1>
-                                                <p>{t('lucas_hernández_content1')}</p>
-                                            </li>
-                                            <li>
-                                                <span className={styles.cover}></span>
-                                                <h1>{t('lucas_hernández')}</h1>
-                                                <p>{t('lucas_hernández_content1')}</p>
-                                            </li>
-                                        </ul>
+                                        <Swiper
+                                            effect={"cards"}
+                                            grabCursor={true}
+                                            
+                                            className="mySwiper"
+                                            loop={true}
+                                            // autoplay={
+                                            //     {
+                                            //         delay: 2500,
+                                            //         disableOnInteraction: false,
+                                            //     }
+                                            // }
+                                            cardsEffect = {
+                                                {
+                                                    perSlideOffset: 3,
+                                                    perSlideRotate: 5,
+                                                    Rotate:true,
+                                                    slideShadows: false,
+                                                    // transformEl:"active"
+                                                }
+                                            }
+                                            modules={[EffectCards]}
+                                        >
+                                            <SwiperSlide className={styles.player}>
+                                                <div className={styles.player_item}>
+                                                    <span className={styles.cover}></span>
+                                                    <h1>{t("gianluigi_donnarumma")}</h1>
+                                                    <p>{t("gianluigi_donnarumma_content1")}</p>
+                                                </div>
+                                            </SwiperSlide>
+                                            <SwiperSlide className={styles.player}>
+                                                <div className={styles.player_item}>
+                                                    <span className={styles.cover}></span>
+                                                    <h1>{t("achraf_hakimi")}</h1>
+                                                    <p>{t("achraf_hakimi_content1")}</p>
+                                                </div>
+                                            </SwiperSlide>
+                                            <SwiperSlide className={styles.player}>
+                                                <div className={styles.player_item}>
+                                                    <span className={styles.cover}></span>
+                                                    <h1>{t("marco_verratti")}</h1>
+                                                    <p>{t('marco_verratti_content1')}</p>
+                                                </div>
+                                            </SwiperSlide>
+                                            <SwiperSlide className={styles.player}>
+                                                <div className={styles.player_item}>
+                                                    <span className={styles.cover}></span>
+                                                    <h1>{t('lucas_hernández')}</h1>
+                                                    <p>{t('lucas_hernández_content1')}</p>
+                                                </div>
+                                            </SwiperSlide>
+                                            <SwiperSlide className={styles.player}>
+                                                <div className={styles.player_item}>
+                                                    <span className={styles.cover}></span>
+                                                    <h1>{t('lucas_hernández')}</h1>
+                                                    <p>{t('lucas_hernández_content1')}</p>
+                                                </div>
+                                            </SwiperSlide>
+                                        </Swiper>
+
                                     </div>
                                 </div>
                                 <div className={styles.roadmap + " section"}>
@@ -454,6 +489,18 @@ const Home = ({
                                             <li><i>Q2</i>
                                                 <h1>{t('q2_q')}</h1>
                                                 <p>{t('q2_a')}</p>
+                                            </li>
+                                            <li><i>Q3</i>
+                                                <h1>{t('q3_q')}</h1>
+                                                <p>{t('q3_a')}</p>
+                                            </li>
+                                            <li><i>Q4</i>
+                                                <h1>{t('q4_q')}</h1>
+                                                <p>{t('q4_a')}</p>
+                                            </li>
+                                            <li><i>Q5</i>
+                                                <h1>{t('q5_q')}</h1>
+                                                <p>{t('q5_a')}</p>
                                             </li>
                                         </ul>
                                     </div>

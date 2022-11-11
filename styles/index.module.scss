@@ -301,58 +301,65 @@
         }
         .content{
             padding: 1rem 0;
-            ul{
-                display: flex;
-                li{
-                    width: 4rem;
-                    height: 4.5rem;
+            .player{
+                opacity: 1;
+                .player_item {
+                    width: 8rem;
+                    height: 6.5rem;
                     position: relative;
                     z-index: 8;
-                    opacity: 0.4;
-                    &:nth-child(1){
-                        .cover{
+                    &:nth-child(1) {
+                        .cover {
                             background-image: url(../public/home/player_1.png);
                         }
                     }
-                    &:nth-child(2){
+
+                    &:nth-child(2) {
                         .cover {
                             background-image: url(../public/home/player_2.png);
                         }
                     }
-                    &:nth-child(3){
+
+                    &:nth-child(3) {
                         .cover {
                             background-image: url(../public/home/player_3.png);
                         }
                     }
-                    &:nth-child(4){
+
+                    &:nth-child(4) {
                         .cover {
                             background-image: url(../public/home/player_4.png);
                         }
                     }
+
                     &:nth-child(5) {
                         .cover {
                             background-image: url(../public/home/player_4.png);
                         }
                     }
-                    .cover{
+
+                    .cover {
                         background: url(../public/home/player_1.png) no-repeat center/ auto 100%;
                         width: 100%;
-                        height:100%;
+                        height: 100%;
                         float: left;
-                        position: absolute;
                         z-index: 2;
                     }
-                    &.active{
+
+                    &:hover {
                         z-index: 9;
                         opacity: 1;
-                        h1{
+
+                        h1 {
                             display: block;
                         }
-                        p{
+
+                        p {
                             display: block;
                         }
                     }
-                    h1{
+
+                    h1 {
                         color: #CCFD0A;
                         background: url(../public/home/ambassador_title.png) no-repeat center/auto 100%;
                         position: absolute;
@@ -361,20 +368,21 @@
                         left: 2.5rem;
                         z-index: 1;
                         top: 0.3rem;
-                        display: none;
+                        // display: none;
                         font-size: 0.24rem;
                         color: #000;
                         line-height: 0.8rem;
                         padding-left: 0.9rem;
                         font-family: Nofex;
                     }
-                    p{
+
+                    p {
                         color: #fff;
                         padding-left: 3.5rem;
                         font-size: 0.35rem;
                         padding-top: 1.2rem;
                         position: absolute;
-                        display: none;
+                        // display: none;
                         width: 15.7rem;
                     }
                 }
@@ -578,7 +586,7 @@
                 background: url(../public/home/qa_subtitle.png) no-repeat center/auto 100%;
                 position: absolute;
                 height: 0.6rem;
-                width: 11.4rem;
+                width: 12.4rem;
                 top: 0.3rem;
                 left: 0.8rem;
                 opacity: 0.15;
