@@ -272,7 +272,6 @@ const Home = ({
                             className={styles.team_list}
                           ></SwiperSlide>
                         </Swiper>
-                        <button>More Club &gt;&gt;</button>
                       </div>
                     </div>
                     <div className={styles.video}>

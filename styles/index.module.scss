@@ -621,7 +621,7 @@
     .solgen {
         width: 20rem;
         margin: 0 auto;
-        padding-top: 6rem;
+        padding-top: 5rem;
         display: flex;
         position: relative;
         i {
@@ -684,20 +684,21 @@
 
             .team {
                 width: 100%;
-                height: 20vh;
+                height: 4rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-content: center;
                 align-items: center;
-                margin: 1rem 0;
+                margin: 0.2rem 0;
                 .team_swiper {
                     height: 3rem;
                     .team_list {
                         height: 3rem;
                         @for $i from 1 to 20 {
                             &:nth-child(#{$i}) {
-                                background: url(../public/home/team#{$i}.png) no-repeat center/auto 80%;
+                                background: url(../public/home/team#{$i}.png) no-repeat center/auto ;
+                                background-size: 100% auto;
                             }
                         }
                     }
@@ -775,7 +776,7 @@
 
         .title {
             background: url(../public/home/what_is_ffc_title.png) no-repeat left center/auto 100%;
-            height: 1rem;
+            height: 1.2rem;
             display: block;
             position: relative;
             margin-bottom: 0.5rem;
@@ -792,9 +793,10 @@
         .content {
             .swiper_silde {
                 text-align: left;
-                font-size: 1rem;
+                font-size: 0.9rem;
                 line-height: 1.7em;
                 height: 60vh;
+                overflow-y: auto;
             }
             .swiper_silde_thumbs {
                 position: relative;
@@ -849,7 +851,7 @@
     .football_ambassador{
         width: 20rem;
         margin: 0 auto;
-        padding: 6rem 2rem 0;
+        padding: 5.4rem 2rem 0;
         position: relative;
         i.flag {
             font-family: fifa;
@@ -868,7 +870,7 @@
         }
         .title {
             background: url(../public/home/football_ambassador.png) no-repeat left center/auto 100%;
-            height: 1rem;
+            height: 1.2rem;
             display: block;
             position: relative;
             margin-bottom: 0.5rem;
@@ -883,7 +885,7 @@
             }
         }
         .content{
-            padding: 1rem 0;
+            padding: 1rem 0 0 0;
             width: 14rem;
             float: none;
             margin: auto;
@@ -894,7 +896,7 @@
                 opacity: 0.7;
                 .player_item {
                     width: 14rem;
-                    height: 28rem;
+                    height: auto;
                     position: relative;
                     z-index: 8;
                     .cover {
@@ -974,7 +976,7 @@
     .roadmap {
         width: 20rem;
         margin: 0 auto;
-        padding: 6rem 0 0;
+        padding: 5.4rem 0 0;
         position: relative;
         i.flag {
             font-family: fifa;
@@ -993,7 +995,7 @@
         }
         .title {
             background: url(../public/home/roadmap.png) no-repeat left center/auto 100%;
-            height: 1rem;
+            height: 1.2rem;
             display: block;
             position: relative;
             margin-bottom: 0.5rem;
@@ -1036,14 +1038,15 @@
                     }
 
                     &:nth-child(2) {
-                      left: 1.3rem;
+                      left: 2.7rem;
                       bottom: 33.5rem;
                       text-align: right;
+                      width: 6.6rem;
                     }
 
                     &:nth-child(3) {
                       left: 10.7rem;
-                      top: 11.6rem;
+                      top: 11.3rem;
                     }
 
                     &:nth-child(4) {
@@ -1066,7 +1069,7 @@
                     }
 
                     &:nth-child(7) {
-                      top: 30rem;
+                      top: 29rem;
                       left: 10.7rem;
                       width: 7rem;
                     }
@@ -1083,7 +1086,7 @@
 
     .partner {
         margin: 0 auto;
-        padding: 6rem 1rem 0 1rem;
+        padding: 5.4rem 1rem 0 1rem;
         position: relative;
         i.flag {
             font-family: fifa;
@@ -1102,7 +1105,7 @@
         }
         .title {
             background: url(../public/home/our_partner.png) no-repeat left center/auto 100%;
-            height: 1rem;
+            height: 1.2rem;
             display: block;
             position: relative;
             margin-bottom: 0.5rem;
@@ -1135,7 +1138,7 @@
     .qa{
         width: 20rem;
         margin: 0 auto;
-        padding: 6rem 2rem 0 2rem;
+        padding: 5.4rem 2rem 0 2rem;
         position: relative;
         i.flag {
             font-family: fifa;
@@ -1155,7 +1158,7 @@
 
         .title {
             background: url(../public/home/qa_title.png) no-repeat left center/auto 100%;
-            height: 1rem;
+            height: 1.2rem;
             display: block;
             position: relative;
             margin-bottom: 0.5rem;
@@ -1184,11 +1187,11 @@
                         background: #0A1C3E;
                         border-radius: 5px;
                         font-size: 0.8rem;
-                        width: 0.9rem;
-                        height: 0.9rem;
+                        width: 1.2rem;
+                        height: 1.2rem;
                         position: absolute;
                         text-align: center;
-                        line-height: 0.9rem;
+                        line-height: 1.2rem;
                         left: 0.1rem;
                         top: 0.3rem;
                     }
