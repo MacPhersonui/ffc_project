@@ -10,6 +10,7 @@ import {
     useTranslation,
     Trans
 } from 'next-i18next'
+
 const cx = classNames.bind(styles)
 
 const Header = (props) => {
@@ -20,7 +21,7 @@ const Header = (props) => {
     const {
         t
     } = useTranslation('common')
-    useEffect(async () => {
+    useEffect( () => {
         // initNetWork()
     }, [])    
 
@@ -111,13 +112,18 @@ const Header = (props) => {
               OUR Partner
             </li>
           </ul>
+          <div className={styles.locale}>
+            <Link href="/en" replace locale="en">
+              <span className={cx({ active: router.locale === 'en' })}>EN</span>
+            </Link>
+            /
+            <Link href="/fr" replace locale="fr">
+              <span className={cx({ active: router.locale === 'fr' })}>FR</span>
+            </Link>
+          </div>
         </div>
         <nav className={styles.navbar}>
           <i className={styles.logo}></i>
-          <dl className={styles.language}>
-            <dt>French</dt>
-            <dt>English</dt>
-          </dl>
           <div className={cx(styles.open_menu, { open: openState })}>
             <div
               onClick={() => {
@@ -129,61 +135,73 @@ const Header = (props) => {
             </div>
             <span>MENU</span>
           </div>
-          <ul id="Menu">
-            <li
-              data-menuanchor="home"
-              onClick={() => {
-                window.fullpage_api.moveTo(1, 1000)
-              }}
-              className={styles.active}
-            >
-              Home
-            </li>
-            <li
-              data-menuanchor="about_ffc"
-              onClick={() => {
-                window.fullpage_api.moveTo(2, 1000)
-              }}
-            >
-              About FFC
-            </li>
-            <li
-              data-menuanchor="football_ambassador"
-              onClick={() => {
-                window.fullpage_api.moveTo(3, 1000)
-              }}
-            >
-              Football Ambassador
-            </li>
-            <li
-              data-menuanchor="roadmap"
-              onClick={() => {
-                window.fullpage_api.moveTo(4, 1000)
-              }}
-            >
-              Roadmap
-            </li>
-            <li
-              data-menuanchor="our_partner"
-              onClick={() => {
-                window.fullpage_api.moveTo(5, 1000)
-              }}
-            >
-              OUR Partner
-            </li>
-          </ul>
+          <div className={styles.navwrap}>
+            <ul id="Menu">
+              <li
+                data-menuanchor="home"
+                onClick={() => {
+                  window.fullpage_api.moveTo(1, 1000)
+                }}
+                className={styles.active}
+              >
+                Home
+              </li>
+              <li
+                data-menuanchor="about_ffc"
+                onClick={() => {
+                  window.fullpage_api.moveTo(2, 1000)
+                }}
+              >
+                About FFC
+              </li>
+              <li
+                data-menuanchor="football_ambassador"
+                onClick={() => {
+                  window.fullpage_api.moveTo(3, 1000)
+                }}
+              >
+                Football Ambassador
+              </li>
+              <li
+                data-menuanchor="roadmap"
+                onClick={() => {
+                  window.fullpage_api.moveTo(4, 1000)
+                }}
+              >
+                Roadmap
+              </li>
+              <li
+                data-menuanchor="our_partner"
+                onClick={() => {
+                  window.fullpage_api.moveTo(5, 1000)
+                }}
+              >
+                OUR Partner
+              </li>
+            </ul>
+            <dl className={styles.language}>
+              <dt>
+                <Link href="/fr" replace locale="fr">
+                  <span>French</span>
+                </Link>
+              </dt>
+              <dt>
+                <Link href="/en" replace locale="en">
+                  <span>English</span>
+                </Link>
+              </dt>
+            </dl>
+          </div>
+
           {/* <div className={styles.wallet}>
                     <Wallet />
                 </div> */}
         </nav>
         {/* <div className={styles.locale}>
-                <Link
-                    href='#'
-                    locale={router.locale === 'en' ? 'zh' : 'en'}
-                >
-                    {router.locale === 'en' ? "English" : "中文"}
-                </Link>
-            </div> */}
+          <Link href="#" locale={router.locale === 'en' ? 'zh' : 'en'}>
+            {router.locale === 'en' ? 'English' : '中文'}
+          </Link>
+        </div> */}
         {props.children}
       </header>
     )

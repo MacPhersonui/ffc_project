@@ -292,7 +292,7 @@ const Home = ({
                           <SwiperSlide className={styles.swiper_silde}>
                             {/* <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1WJhn7Ih7v8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe> */}
                             <video
-                              src="/home/bg_video.mp4"
+                              src="/home/bg_video1.mp4"
                               controls={true}
                               autoPlay={true}
                               playsInline={true}
@@ -472,8 +472,8 @@ const Home = ({
                             <span
                               className={cx(styles.cover, styles.player5)}
                             ></span>
-                            <h1>{t('lucas_hernández')}</h1>
-                            <p>{t('lucas_hernández_content1')}</p>
+                            <h1>{t('brecht_dejaegere')}</h1>
+                            <p>{t('brecht_dejaegere_content1')}</p>
                           </div>
                         </SwiperSlide>
                       </Swiper>
@@ -518,6 +518,7 @@ const Home = ({
                         <li>
                           <h1>{t('roadmap_time7')}</h1>
                           <h2>{t('roadmap_time7_content1')}</h2>
+                          <h2>{t('roadmap_time7_content2')}</h2>
                         </li>
                         <li>
                           <h1>{t('roadmap_time8')}</h1>

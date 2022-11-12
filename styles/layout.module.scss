@@ -19,7 +19,6 @@
     margin: 0 auto;
     position: relative;
     z-index: 999;
-    overflow: hidden;
     .volet_menu{
       display: none;
     }
@@ -29,9 +28,10 @@
             .333333rem
             /* 20/60 */
         ;
+        display: flex;
+        justify-content: space-between;
         .logo {
             background: url(../public/layout/logo.png) no-repeat center/100% auto;
-            float: left;
             width: 1.5rem
                 /* 120/60 */
             ;
@@ -41,13 +41,9 @@
         }
 
         ul {
-            float: right;
-            margin-left: .666667rem
-                /* 40/60 */
-            ;
+                display: flex;
 
             li {
-                display: inline-block;
                 font-size: .266667rem
                     /* 16/60 */
                 ;
@@ -67,12 +63,15 @@
                 border-radius: .583333rem
                     /* 35/60 */
                 ;
-                vertical-align: top;
             }
         }
         .open_menu{
           display: none;  
         }
+    }
+    .navwrap{
+      display: flex;
+      align-items: center;
     }
 
     .language{
@@ -81,7 +80,6 @@
         height: 0.3rem;
         font-size: 0.4rem;
         margin-right: 0.5rem;
-        float: right;
         padding-top: 0.65rem;
         &:hover{
             dt{
@@ -165,7 +163,6 @@
         margin: 0 auto;
         position: fixed;
         z-index: 999;
-        overflow: hidden;
         top: 0;
         &.blue{
            background-color: #091c3eae !important;
@@ -186,6 +183,18 @@
           overflow-y: auto;
           transition: all 0.5s ease;
           z-index: 1;
+
+          .locale{
+              margin-top: 2rem;
+              span{
+                font-size: 0.8rem;
+                margin: 0 0.2rem;
+                font-family: 'Courier New', Courier, monospace;
+                &.active{
+                  font-weight: bold;
+                }
+              }
+            }
           &.active{
             left: 0px;
             transition: all 0.5s ease;
@@ -205,6 +214,7 @@
             align-items: center;
             position: relative;
             z-index: 10;
+            justify-content: flex-start;
             .open_menu{
               display: flex;
               align-items: center;
@@ -286,8 +296,11 @@
                 float: none;
                 width: 3.6rem;
                 height: 1.366667rem;
+                margin-right: 1rem;
             }
-
+            .language{
+              display: none;
+            }
             ul {
                 display: none;
                 float: left;
@@ -325,6 +338,7 @@
                     }
                 }
             }
+            
         }
 
         .wallet {
