@@ -8,7 +8,7 @@ const Footer = ({ t }) => {
           <li onClick={() => window.open('https://twitter.com/leagueofffc')}>
             <i className={styles.twitter}></i>
           </li>
-          <li onClick={() => window.open('https://discord.gg/7YcbauR7xD')}>
+          <li onClick={() => window.open('https://discord.gg/gkXar6XMcU')}>
             <i className={styles.discord}></i>
           </li>
         </ul>
