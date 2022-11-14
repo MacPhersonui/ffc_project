@@ -123,7 +123,7 @@ const Header = (props) => {
           </div>
           <div className={styles.contacts}>
             <div className={styles.twitter} onClick={() => window.open('https://twitter.com/leagueofffc')}></div>
-            <div className={styles.discord} onClick={() => window.open('https://discord.gg/7YcbauR7xD')}></div>
+            <div className={styles.discord} onClick={() => window.open('https://discord.gg/EV48Dbu7YZ')}></div>
           </div>
         </div>
         <nav className={styles.navbar}>
