@@ -73,7 +73,7 @@ const Header = (props) => {
               }}
               className={styles.active}
             >
-              Home
+              {t('nav_home')}
             </li>
             <li
               data-menuanchor="about_ffc"
@@ -82,7 +82,7 @@ const Header = (props) => {
                 window.fullpage_api.moveTo(2, 1000)
               }}
             >
-              About FFC
+              {t('nav_about_FFC')}
             </li>
             <li
               data-menuanchor="football_ambassador"
@@ -91,7 +91,7 @@ const Header = (props) => {
                 window.fullpage_api.moveTo(3, 1000)
               }}
             >
-              Football Ambassador
+              {t('nav_football_ambassador')}
             </li>
             <li
               data-menuanchor="roadmap"
@@ -100,7 +100,7 @@ const Header = (props) => {
                 window.fullpage_api.moveTo(4, 1000)
               }}
             >
-              Roadmap
+              {t('nav_road_map')}
             </li>
             <li
               data-menuanchor="our_partner"
@@ -109,7 +109,7 @@ const Header = (props) => {
                 window.fullpage_api.moveTo(5, 1000)
               }}
             >
-              OUR Partner
+              {t('nav_our_partner')}
             </li>
           </ul>
           <div className={styles.locale}>
@@ -121,16 +121,20 @@ const Header = (props) => {
               <span className={cx({ active: router.locale === 'fr' })}>FR</span>
             </Link>
           </div>
+          <div className={styles.contacts}>
+            <div className={styles.twitter} onClick={() => window.open('https://twitter.com/leagueofffc')}></div>
+            <div className={styles.discord} onClick={() => window.open('https://discord.gg/7YcbauR7xD')}></div>
+          </div>
         </div>
         <nav className={styles.navbar}>
           <i className={styles.logo}></i>
-          <div className={cx(styles.open_menu, { open: openState })}>
-            <div
-              onClick={() => {
-                setopenState(!openState)
-              }}
-              className={styles.menu_burger}
-            >
+          <div
+            className={cx(styles.open_menu, { open: openState })}
+            onClick={() => {
+              setopenState(!openState)
+            }}
+          >
+            <div className={styles.menu_burger}>
               <span></span> <span></span> <span></span>
             </div>
             <span>MENU</span>
@@ -144,7 +148,7 @@ const Header = (props) => {
                 }}
                 className={styles.active}
               >
-                Home
+                {t('nav_home')}
               </li>
               <li
                 data-menuanchor="about_ffc"
@@ -152,7 +156,7 @@ const Header = (props) => {
                   window.fullpage_api.moveTo(2, 1000)
                 }}
               >
-                About FFC
+                {t('nav_about_FFC')}
               </li>
               <li
                 data-menuanchor="football_ambassador"
@@ -160,7 +164,7 @@ const Header = (props) => {
                   window.fullpage_api.moveTo(3, 1000)
                 }}
               >
-                Football Ambassador
+                {t('nav_football_ambassador')}
               </li>
               <li
                 data-menuanchor="roadmap"
@@ -168,7 +172,7 @@ const Header = (props) => {
                   window.fullpage_api.moveTo(4, 1000)
                 }}
               >
-                Roadmap
+                {t('nav_road_map')}
               </li>
               <li
                 data-menuanchor="our_partner"
@@ -176,7 +180,7 @@ const Header = (props) => {
                   window.fullpage_api.moveTo(5, 1000)
                 }}
               >
-                OUR Partner
+                {t('nav_our_partner')}
               </li>
             </ul>
             <dl className={styles.language}>

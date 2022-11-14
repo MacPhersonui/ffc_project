@@ -207,6 +207,25 @@
                   }
               }
           }
+          .contacts{
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            div{
+              width: 1.5rem;
+              height: 1.5rem;
+              margin-right: 0.4rem;
+            }
+             .twitter {
+                  background: url(../public/home/icon_twitter.svg) no-repeat center;
+                  background-size: 100% auto;
+              }
+
+              .discord {
+                  background: url(../public/home/icon_discord.svg) no-repeat center;
+                  background-size: auto 100%;
+              }
+          }
         }
         .navbar {
             padding: 1rem;

@@ -416,14 +416,14 @@
             margin: 2rem 0;
             overflow-x: auto;
             ul {
-                background: url(../public/home/roadmap_line.png) no-repeat left center/auto 100%;
-                height: 3.7rem;
+                background: url(../public/home/roadmap_line.png) no-repeat left center/auto;
+                background-size: 100% auto;
+                height: 5rem;
                 position: relative;
                 width: 26rem;
                 li {
                     position: absolute;
                     left: 100rem;
-
                     h1 {
                         color: #CCFD0A;
                         font-size: 0.5rem;
@@ -434,48 +434,49 @@
                     }
 
                     &:nth-child(1) {
-                        left: 2.7rem;
-                        top: -0.2rem;
+                        left: 2.6rem;
+                        bottom: 2.6rem;
                     }
 
                     &:nth-child(2) {
                         left: 4.1rem;
-                        bottom: 0rem;
+                        top: 2.6rem;
+                        width: 6.8rem;
                     }
 
                     &:nth-child(3) {
-                        left: 9.1rem;
-                        top: -0.2rem;
-                        width: 5.5rem;
+                        left: 9.8rem;
+                        bottom: 2.6rem;
+                        width: 5.8rem;
                     }
 
                     &:nth-child(4) {
-                        left: 10.7rem;
-                        bottom: 0rem;
+                        left: 11.4rem;
+                        top: 2.6rem;
                     }
 
                     &:nth-child(5) {
-                        top: -0.1rem;
-                        left: 14.9rem;
-                        width: 4.8rem;
-                    }
-
-                    &:nth-child(6) {
-                        bottom: 0;
-                        left: 16.2rem;
+                        bottom: 2.6rem;
+                        left: 16rem;
                         width: 5.4rem;
                     }
 
+                    &:nth-child(6) {
+                        top: 2.6rem;
+                        left: 17.7rem;
+                        width: 5.6rem;
+                    }
+
                     &:nth-child(7) {
-                        top: -0.1rem;
-                        left: 20.3rem;
+                        bottom: 2.6rem;
+                        left: 22rem;
                         width: 6.8rem;
                     }
 
                     &:nth-child(8) {
-                        bottom: 0;
-                        left: 21.6rem;
-                        width: 7.8rem;
+                        top: 2.6rem;
+                        left: 23.4rem;
+                        width: 6.8rem;
                     }
                 }
             }
@@ -786,7 +787,7 @@
                 height: 0.6rem;
                 width: 6.4rem;
                 top: 0.3rem;
-                left: 0.8rem;
+                left: 4.8rem;
             }
         }
 
@@ -1013,7 +1014,6 @@
 
         .content {
             margin: 2rem 0;
-            overflow: hidden;
             margin-top: 1rem;
             ul {
                 background: url(../public/home/roadmap_line1.png) no-repeat center center/auto 100%;
@@ -1034,11 +1034,13 @@
 
                     &:nth-child(1) {
                         left: 10.7rem;
-                        top: 1.5rem;
+                        bottom: 36rem;;
                     }
 
                     &:nth-child(2) {
-                      left: 2.7rem;
+                      right: 10.7rem;
+                      left: auto;
+                      top: auto;
                       bottom: 33.5rem;
                       text-align: right;
                       width: 6.6rem;
@@ -1046,37 +1048,44 @@
 
                     &:nth-child(3) {
                       left: 10.7rem;
-                      top: 10.5rem;
+                      bottom: 25.4rem;
                       width: 7rem;
                     }
 
                     &:nth-child(4) {
-                      left: 3.9rem;
+                      right: 10.7rem;
+                      left: auto;
+                      top: auto;
                       bottom: 22.7rem;
                       text-align: right;
+                      width: 6.6rem;
                     }
 
                     &:nth-child(5) {
-                      top: 20.2rem;
+                      bottom: 16rem;
                       left: 10.7rem;
                       width: 6.8rem;
                     }
 
                     &:nth-child(6) {
+                      right: 10.7rem;
+                      left: auto;
+                      top: auto;
                       bottom: 13.3rem;
-                      left: 1.4rem;
-                      width: 8rem;
                       text-align: right;
+                      width: 8rem;
                     }
 
                     &:nth-child(7) {
-                      top: 28.4rem;
+                      bottom: 7rem;
                       left: 10.7rem;
                       width: 7.2rem;
                     }
                     &:nth-child(8) {
                       bottom: 4.8rem;
-                      left: 1.4rem;
+                      right: 10.7rem;
+                      left: auto;
+                      top: auto;
                       width: 7.8rem;
                       text-align: right;
                     }
@@ -1124,6 +1133,7 @@
         .content {
             height: 20rem;
             margin-top: 2rem;
+            padding: 0 1.2rem;
             .outer {
                 .inner {
                     height: 20rem;
